@@ -19,7 +19,7 @@ const Logo = ({ onClick }: LogoProps = {}) => {
       }}
     >
       <Image
-        src="/images/(common)/half_byte_logo.jpeg"
+        src="/assets/(common)/half_byte_logo.jpeg"
         alt="Half Byte — Amplifying digital intelligence"
         width={147}
         height={49}

@@ -12,8 +12,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Beyond Intelligence",
-  description: "Beyond Intelligence",
+  title: "Half Byte",
+  description: "Amplifying Digital Intelligence",
   icons: {
     icon: "/icon.ico",
     apple: "/icon.ico",
