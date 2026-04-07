@@ -1,7 +1,7 @@
-import { Heading2, Paragraph } from "@/components/common/Typography";
 import { Button } from "@/components/ui/button";
+import { Heading2, Paragraph } from "@/components/common/Typography";
 
-const LandingPageHeroSection = () => {
+const HeroSection = () => {
     return (
         <div className="bg-image-home-hero relative h-[97.5vh] bg-cover bg-center bg-no-repeat">
             <div className="absolute inset-0 bg-[#0000008C]" />
@@ -29,4 +29,4 @@ const LandingPageHeroSection = () => {
     );
 };
 
-export default LandingPageHeroSection;
+export default HeroSection;
