@@ -1,4 +1,5 @@
 import HeroSection from "@/components/page-components/Home/HeroSection";
+import AboutUsSection from "@/components/page-components/Home/AboutUsSection";
 import OurPartnersSection from "@/components/page-components/Home/OurPartnersSection";
 import TechnologiesSection from "@/components/page-components/Home/TechnologiesSection";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <OurPartnersSection />
       <TechnologiesSection />
+      <AboutUsSection />
     </div>
   );
 }

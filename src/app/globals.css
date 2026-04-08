@@ -95,6 +95,7 @@
 
   /* --image-signup-start: url(/assets/pages/signup/start/background.svg); */
   --image-home-hero: url("/assets/pages/Home/HeroSection/image.jpg");
+  --image-about-us-right-section: url("/assets/pages/Home/AboutUsSection/rightsideimage.jpg");
 
   --gradient-cta-section: linear-gradient(0deg, #07081D 0%, #07081D 100%), #6366F1;
 
@@ -421,6 +422,10 @@ body {
   /* Imported from previous project */
   .bg-image-home-hero {
     background-image: var(--image-home-hero);
+  }
+
+  .bg-image-about-us-right-section {
+    background-image: var(--image-about-us-right-section);
   }
 }
 
