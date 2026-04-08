@@ -429,6 +429,35 @@ body {
   }
 }
 
+.about-us-badge-wrapper {
+  position: relative;
+  background: white;
+  border-bottom-right-radius: 16px;
+  width: fit-content;
+  padding-right: 16px;
+  padding-bottom: 16px;
+}
+
+.about-us-badge-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -16px;
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(circle at 0% 0%, white 2px, transparent 16px);
+}
+
+.about-us-badge-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(circle at 0% 0%, white 2px, transparent 16px);
+}
+
 /* Imported from previous project */
 @media (min-width: 1400px) and (max-width: 1439px) {
   .card {
