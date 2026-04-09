@@ -35,9 +35,7 @@ const TechnologiesBodySection = () => {
                             <Heading5 className="leading-7.75!">
                                 {selectedTechnology?.title}
                             </Heading5>
-                            <Paragraph className="md:text-xl! text-[#1A1A1A]! leading-6.25!">
-                                {selectedTechnology?.description}
-                            </Paragraph>
+                            <Paragraph className="md:text-xl! text-[#1A1A1A]! leading-6.25!" dangerouslySetInnerHTML={{ __html: selectedTechnology?.description }} />
                         </div>
                     </div>
                 </div>

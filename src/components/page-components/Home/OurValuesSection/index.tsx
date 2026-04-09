@@ -3,7 +3,7 @@ import OurValuesHeaderSection from "@/components/page-components/Home/OurValuesS
 
 const OurValuesSection = () => {
     return (
-        <div className="bg-white py-35 flex flex-col gap-11.25">
+        <div className="bg-white pt-35 flex flex-col gap-11.25">
             <OurValuesHeaderSection />
             <OurValuesBodySection />
         </div>

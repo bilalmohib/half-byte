@@ -3,6 +3,7 @@ import AboutUsSection from "@/components/page-components/Home/AboutUsSection";
 import OurValuesSection from "@/components/page-components/Home/OurValuesSection";
 import OurPartnersSection from "@/components/page-components/Home/OurPartnersSection";
 import TechnologiesSection from "@/components/page-components/Home/TechnologiesSection";
+import OurStrategicGoalsSection from "@/components/page-components/Home/OurStrategicGoalsSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <TechnologiesSection />
       <AboutUsSection />
       <OurValuesSection />
+      <OurStrategicGoalsSection />
     </div>
   );
 }

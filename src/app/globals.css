@@ -97,6 +97,7 @@
   --image-home-hero: url("/assets/pages/Home/HeroSection/image.jpg");
   --image-about-us-right-section: url("/assets/pages/Home/AboutUsSection/rightsideimage.jpg");
   --image-about-us-bottom-right-image: url("/assets/pages/Home/AboutUsSection/aboutUsBottomRightImage.jpg");
+  --image-our-strategic-goals-body-section: url("/assets/pages/Home/OurStrategicGoals/OurStrategicGoalsBody/business-team-discussing-their-ideas-office.png");
 
   --gradient-cta-section: linear-gradient(0deg, #07081D 0%, #07081D 100%), #6366F1;
 
@@ -431,6 +432,10 @@ body {
 
   .bg-image-about-us-bottom-right-image {
     background-image: var(--image-about-us-bottom-right-image);
+  }
+
+  .bg-image-our-strategic-goals-body-section {
+    background-image: var(--image-our-strategic-goals-body-section);
   }
 }
 
