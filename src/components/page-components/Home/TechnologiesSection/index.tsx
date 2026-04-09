@@ -10,7 +10,6 @@ const TechnologiesSection = () => {
                     <TechnologiesHeaderSection />
                     <TechnologiesBodySection />
                 </div>
-
             </Container>
         </div>
     );
