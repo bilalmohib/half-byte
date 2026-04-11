@@ -4,6 +4,7 @@ import OurValuesSection from "@/components/page-components/Home/OurValuesSection
 import OurPartnersSection from "@/components/page-components/Home/OurPartnersSection";
 import TechnologiesSection from "@/components/page-components/Home/TechnologiesSection";
 import OurStrategicGoalsSection from "@/components/page-components/Home/OurStrategicGoalsSection";
+import OurNewsAndCareersSection from "@/components/page-components/Home/OurNewsAndCareersSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <AboutUsSection />
       <OurValuesSection />
       <OurStrategicGoalsSection />
+      <OurNewsAndCareersSection />
     </div>
   );
 }
