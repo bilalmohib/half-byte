@@ -1,6 +1,7 @@
 import HeroSection from "@/components/page-components/Home/HeroSection";
 import AboutUsSection from "@/components/page-components/Home/AboutUsSection";
 import OurValuesSection from "@/components/page-components/Home/OurValuesSection";
+import ContactUsSection from "@/components/page-components/Home/ContactUsSection";
 import OurPartnersSection from "@/components/page-components/Home/OurPartnersSection";
 import TechnologiesSection from "@/components/page-components/Home/TechnologiesSection";
 import OurStrategicGoalsSection from "@/components/page-components/Home/OurStrategicGoalsSection";
@@ -16,6 +17,7 @@ export default function Home() {
       <OurValuesSection />
       <OurStrategicGoalsSection />
       <OurNewsAndCareersSection />
+      <ContactUsSection />
     </div>
   );
 }
