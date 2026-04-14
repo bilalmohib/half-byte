@@ -12,11 +12,14 @@ import {
   footerSocialNames,
   quickLinks,
 } from "@/components/common/Footer/data";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 /** Light gray circle + dark green icon (image2). */
 function ContactIconCircle({ children }: { children: React.ReactNode }) {
   return (
-    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#E8E8E8] text-primary">
+    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white drop-shadow-md text-primary">
       {children}
     </span>
   );
@@ -39,10 +42,12 @@ function FooterNewsletter() {
         onSubmit={handleSubmit}
         className="flex w-full min-w-0 items-center gap-0 rounded-full border border-[#DBDBDB] bg-white p-1 pl-4 shadow-none"
       >
-        <label htmlFor="footer-newsletter-email" className="sr-only">
+        <Label htmlFor="footer-newsletter-email" className="sr-only">
           Email address
-        </label>
-        <input
+        </Label>
+        <Input
+          variant="underline"
+          inputClassName="min-w-0 flex-1 border-0 bg-transparent py-2 text-sm text-black outline-none placeholder:text-[#A3A3A3]"
           id="footer-newsletter-email"
           type="email"
           autoComplete="email"
@@ -51,12 +56,12 @@ function FooterNewsletter() {
           onChange={(e) => setEmail(e.target.value)}
           className="min-h-[44px] min-w-0 flex-1 border-0 bg-transparent py-2 text-sm text-black outline-none placeholder:text-[#A3A3A3]"
         />
-        <button
+        <Button
           type="submit"
-          className="h-9 shrink-0 rounded-full bg-primary px-5 text-sm font-medium text-white transition-colors hover:bg-buttonHover sm:h-10 sm:px-6"
+          className="h-10.5 shrink-0 rounded-full bg-primary px-5 text-sm font-medium text-white transition-colors hover:bg-buttonHover sm:h-10 sm:px-6"
         >
           Subscribe
-        </button>
+        </Button>
       </form>
     </div>
   );
@@ -113,7 +118,7 @@ const Footer = ({ className }: FooterProps) => {
                 <ContactIconCircle>
                   <MapPin className="size-4" strokeWidth={2.25} />
                 </ContactIconCircle>
-                <Paragraph className="text-sm! font-normal! leading-5! text-navlink-dropdown-text!">
+                <Paragraph className="text-[#1A1A1A]!">
                   {footerContact.address}
                 </Paragraph>
               </li>
@@ -122,20 +127,24 @@ const Footer = ({ className }: FooterProps) => {
                   <Mail className="size-4" strokeWidth={2.25} />
                 </ContactIconCircle>
                 <div className="flex min-w-0 flex-col gap-1">
-                  <a
+                  <Link
                     href={`mailto:${firstEmail}`}
-                    className="font-roboto text-sm leading-5 text-navlink-dropdown-text hover:text-primary"
+                    className="no-underline"
                   >
-                    {firstEmail}
-                  </a>
-                  {restEmails.map((addr) => (
-                    <a
-                      key={addr}
-                      href={`mailto:${addr}`}
-                      className="font-roboto text-sm leading-5 text-navlink-dropdown-text hover:text-primary"
+                    <Paragraph className="text-[#1A1A1A]! hover:text-primary">
+                      {firstEmail}
+                    </Paragraph>
+                  </Link>
+                  {restEmails.map((email) => (
+                    <Link
+                      key={email}
+                      href={`mailto:${email}`}
+                      className="no-underline"
                     >
-                      {addr}
-                    </a>
+                      <Paragraph className="text-[#1A1A1A]! hover:text-primary">
+                        {email}
+                      </Paragraph>
+                    </Link>
                   ))}
                 </div>
               </li>
@@ -143,12 +152,14 @@ const Footer = ({ className }: FooterProps) => {
                 <ContactIconCircle>
                   <Phone className="size-4" strokeWidth={2.25} />
                 </ContactIconCircle>
-                <a
+                <Link
                   href={footerContact.phoneHref}
-                  className="font-roboto text-sm leading-5 text-navlink-dropdown-text hover:text-primary"
+                  className="no-underline"
                 >
-                  {footerContact.phone}
-                </a>
+                  <Paragraph className="text-[#1A1A1A]!">
+                    {footerContact.phone}
+                  </Paragraph>
+                </Link>
               </li>
             </ul>
           </div>
@@ -162,9 +173,11 @@ const Footer = ({ className }: FooterProps) => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="font-roboto text-sm font-normal leading-7 text-black no-underline transition-colors hover:text-primary"
+                  className="no-underline"
                 >
-                  {item.title}
+                  <Paragraph className="text-[#1A1A1A]! hover:text-primary">
+                    {item.title}
+                  </Paragraph>
                 </Link>
               ))}
             </nav>
