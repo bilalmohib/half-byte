@@ -93,7 +93,7 @@ function TechnologiesNavDropdown({ label }: { label: string }) {
 
 const NavItems = () => {
   return (
-    <div className="flex items-center gap-[95px]">
+    <div className="flex items-center gap-4.25!\ mlllgap-20 lg:gap-[95px]">
       {menuItems.map((item) =>
         item.hasDropdown ? (
           <TechnologiesNavDropdown key={item.title} label={item.title} />
@@ -102,7 +102,7 @@ const NavItems = () => {
             key={item.title}
             href={item.href}
             className={cn(
-              "font-roboto text-xl font-normal leading-none tracking-normal text-navlink-text",
+              "font-roboto text-base mllg:text-lg lg:text-xl font-normal leading-none tracking-normal text-navlink-text",
               "shrink-0 hover:text-primary transition-colors",
             )}
           >
