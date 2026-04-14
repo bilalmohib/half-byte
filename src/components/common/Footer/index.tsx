@@ -1,20 +1,19 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { FormEvent, useMemo, useState } from "react";
-import { MapPin, Mail, Phone } from "lucide-react";
-import Container from "@/components/common/Container";
-import { Heading5, Paragraph } from "@/components/common/Typography";
-import { followUsData } from "@/components/page-components/Home/ContactUsSection/ContactUsFollowUsSection/data";
+import Image from "next/image";
 import {
   footerContact,
   footerSocialNames,
   quickLinks,
 } from "@/components/common/Footer/data";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import { MapPin, Mail, Phone } from "lucide-react";
+import { FormEvent, useMemo, useState } from "react";
+import Container from "@/components/common/Container";
+import { Heading5, Paragraph } from "@/components/common/Typography";
+import { followUsData } from "@/components/page-components/Home/ContactUsSection/ContactUsFollowUsSection/data";
 
 /** Light gray circle + dark green icon (image2). */
 function ContactIconCircle({ children }: { children: React.ReactNode }) {
@@ -40,11 +39,8 @@ function FooterNewsletter() {
       </Heading5>
       <form
         onSubmit={handleSubmit}
-        className="flex w-full min-w-0 items-center gap-0 rounded-full border border-[#DBDBDB] bg-white p-1 pl-4 shadow-none"
+        className="flex w-full min-w-0 items-center gap-0 rounded-full border border-[#DBDBDB] bg-white p-1 pl-4 pr-2 shadow-none"
       >
-        <Label htmlFor="footer-newsletter-email" className="sr-only">
-          Email address
-        </Label>
         <Input
           variant="underline"
           inputClassName="min-w-0 flex-1 border-0 bg-transparent py-2 text-sm text-black outline-none placeholder:text-[#A3A3A3]"
@@ -58,7 +54,7 @@ function FooterNewsletter() {
         />
         <Button
           type="submit"
-          className="h-10.5 shrink-0 rounded-full bg-primary px-5 text-sm font-medium text-white transition-colors hover:bg-buttonHover sm:h-10 sm:px-6"
+          className="h-10.5! shrink-0 rounded-full bg-primary px-5 text-base! font-normal! text-white transition-colors hover:bg-buttonHover sm:h-10 sm:px-6"
         >
           Subscribe
         </Button>
