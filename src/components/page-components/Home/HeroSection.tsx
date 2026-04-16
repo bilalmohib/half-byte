@@ -15,11 +15,11 @@ const HeroSection = () => {
                             Amplifying Digital Power
                         </Paragraph>
                     </div>
-                    <div className="border border-[#C3C3C3] rounded-[62px] p-2 flex flex-row w-[484px]! bg-white mx-auto">
-                        <Button variant="default" className="bg-primary! w-55! h-15! hover:bg-buttonHover! rounded-[53px]! p-2.5! text-xl font-roboto font-normal">
+                    <div className="border border-[#C3C3C3] rounded-[62px] p-2 flex flex-row w-[364px]! mllg:w-[484px]! bg-white mx-auto">
+                        <Button variant="default" className="bg-primary! w-36.5! mllg:w-55! h-13! mllg:h-15! hover:bg-buttonHover! rounded-[53px]! p-2.5! text-base! mllg:text-xl! font-roboto font-normal">
                             Contact Us
                         </Button>
-                        <Button variant="default" className="bg-transparent! hover:bg-transparent! rounded-[53px]! p-2.5! flex justify-center mx-auto items-center w-55 h-15! text-xl text-heading font-roboto font-normal">
+                        <Button variant="default" className="bg-transparent! hover:bg-transparent! rounded-[53px]! p-2.5! flex justify-center mx-auto items-center w-fit! mllg:w-55! h-13! mllg:h-15! text-base! mllg:text-xl! text-heading font-roboto font-normal">
                             Explore Technologies
                         </Button>
                     </div>

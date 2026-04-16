@@ -20,15 +20,6 @@ function Navbar({ className }: NavbarProps) {
 
   return (
     <>
-      {/* Backdrop overlay — visible only when mobile menu is open */}
-      {isMobileMenuOpen && (
-        <div
-          className="xl:hidden fixed inset-0 z-40"
-          style={{ background: "rgba(0, 0, 0, 0.60)" }}
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-      )}
-
       <nav className={cn("w-full transition-all duration-200", className)}>
         <Container>
           {/* White pill container */}
@@ -37,17 +28,17 @@ function Navbar({ className }: NavbarProps) {
               <Logo onClick={() => setIsMobileMenuOpen(false)} />
             </div>
 
-            <div className="pointer-events-none absolute inset-y-0 left-0 right-0 hidden items-center justify-center xl:flex">
+            <div className="pointer-events-none absolute inset-y-0 left-0 right-0 hidden items-center justify-center md:flex">
               <div className="pointer-events-auto">
                 <NavItems />
               </div>
             </div>
 
-            <div className="relative z-10 hidden shrink-0 xl:block">
+            <div className="relative z-10 hidden shrink-0 md:block">
               <ContactUsButton />
             </div>
 
-            <div className="xl:hidden">
+            <div className="md:hidden">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="flex items-center justify-center p-2 rounded-md text-gray-700 focus:outline-none transition-all duration-200"
@@ -66,7 +57,7 @@ function Navbar({ className }: NavbarProps) {
         {/* Mobile/Tablet menu */}
         <div
           className={cn(
-            "xl:hidden overflow-hidden transition-all duration-300 ease-in-out",
+            "md:hidden overflow-hidden transition-all duration-300 ease-in-out",
             isMobileMenuOpen
               ? "max-h-[calc(100vh-80px)] opacity-100"
               : "max-h-0 opacity-0",
