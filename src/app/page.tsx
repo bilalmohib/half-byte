@@ -15,10 +15,10 @@ export default function Home() {
       <TechnologiesSection />
       <AboutUsSection />
       <OurValuesSection />
-      <OurStrategicGoalsSection />
+      {/* <OurStrategicGoalsSection />
       <OurNewsAndCareersSection />
       <ContactUsSection />
-      <CallToActionSection />
+      <CallToActionSection /> */}
     </div>
   );
 }

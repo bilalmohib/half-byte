@@ -5,17 +5,17 @@ import { aboutUsReasonsData } from "@/components/page-components/Home/AboutUsSec
 
 const AboutUsReasons = () => {
     return (
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-1 ssmd:grid-cols-3">
             {aboutUsReasonsData.map((reason, key) => {
                 return (
-                    <div key={key} className={cn("flex flex-col justify-center items-center gap-3.5",
-                        key === aboutUsReasonsData.length - 1 && "border-r-0!",
-                        key !== 0 && "border-l-0",
-                        "border-r border-[#B3B3B3] border-solid border-y-0"
+                    <div key={key} className={cn("flex flex-col justify-center items-center gap-2.5 md:gap-3.25 lg:gap-3.5",
+                        key === aboutUsReasonsData.length - 1 && "border-b-0! ssmd:border-r-0!",
+                        key !== 0 && "border-t-0! ssmd:border-l-0!",
+                        "border-[#B3B3B3] border-solid border-b ssmd:border-y-0 py-4 ssmd:py-0"
                     )}>
                         <Image src={reason.image.src} alt={reason.image.alt} width={reason.image.width} height={reason.image.height} />
                         <Paragraph
-                            className="text-center text-navlink-text! md:text-base! leading-5.25!"
+                            className="text-center text-navlink-text! md:text-base! leading-5! md:leading-5.25! px-3 sm:px-0"
                             dangerouslySetInnerHTML={{ __html: reason.info }}
                         />
                     </div>

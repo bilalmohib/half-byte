@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { ChevronRight, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import {
   menuItems,
   technologyItems,
 } from "@/components/common/Navbar/NavItems/data";
+import { ChevronRight, ChevronDown } from "lucide-react";
 import { ContactUsButton } from "@/components/common/Navbar/NavItems/ContactUsButton";
 
 interface MobileNavItemsProps {
@@ -44,7 +44,7 @@ function MobileNavItems({ onLinkClick }: MobileNavItemsProps) {
                     onClick={() => toggleItem(item.title)}
                     className="flex w-full items-center justify-between rounded-xl px-4 py-3.5 text-left transition-all cursor-pointer hover:bg-gray-50 border-0 bg-transparent"
                   >
-                    <span className="font-roboto text-xl font-normal leading-none tracking-normal text-navlink-text">
+                    <span className="font-roboto text-base mllg:text-lg lg:text-xl font-normal leading-none tracking-normal text-navlink-text">
                       {item.title}
                     </span>
                     <ChevronDown
@@ -64,7 +64,7 @@ function MobileNavItems({ onLinkClick }: MobileNavItemsProps) {
                           href={techItem.href}
                           onClick={onLinkClick}
                           className={cn(
-                            "block font-roboto text-base font-medium leading-none tracking-normal transition-colors hover:text-primary",
+                            "block font-roboto text-sm md:text-base font-light md:font-medium leading-none tracking-normal transition-colors hover:text-primary",
                             isActive(techItem.href)
                               ? "text-primary!"
                               : "text-navlink-dropdown-text",
@@ -82,7 +82,7 @@ function MobileNavItems({ onLinkClick }: MobileNavItemsProps) {
                   onClick={onLinkClick}
                   aria-current={isActive(item.href) ? "page" : undefined}
                   className={cn(
-                    "font-roboto text-xl font-normal leading-none tracking-normal text-navlink-text",
+                    "font-roboto text-base mllg:text-lg lg:text-xl font-normal leading-none tracking-normal text-navlink-text",
                     "flex items-center justify-between rounded-xl px-4 py-3.5 transition-colors hover:bg-gray-50",
                     isActive(item.href) && "text-primary!",
                   )}
