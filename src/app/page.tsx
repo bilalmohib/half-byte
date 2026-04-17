@@ -14,7 +14,7 @@ export default function Home() {
       <OurPartnersSection />
       <TechnologiesSection />
       <AboutUsSection />
-      <OurValuesSection />
+      {/* <OurValuesSection /> */}
       {/* <OurStrategicGoalsSection />
       <OurNewsAndCareersSection />
       <ContactUsSection />
