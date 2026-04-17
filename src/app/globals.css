@@ -347,24 +347,6 @@ body {
   scrollbar-width: none;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0B0C26;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #6366F2;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #6366F1;
-}
-
 .focus\:ring-magic:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(55, 125, 238, 0.3);

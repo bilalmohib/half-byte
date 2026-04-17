@@ -46,7 +46,7 @@ function TechnologiesNavDropdown({ label }: { label: string }) {
         }}
         onPointerLeave={scheduleClose}
         className={cn(
-          "font-roboto text-xl font-normal leading-none tracking-normal text-navlink-text",
+          "font-roboto text-base mllg:text-lg lg:text-xl font-normal leading-none tracking-normal text-navlink-text",
           "flex items-center gap-1 border-0 bg-transparent p-0 outline-none",
           "cursor-pointer hover:text-primary focus-visible:text-primary data-[state=open]:text-primary",
           "data-[state=open]:[&_svg]:rotate-180",
@@ -75,7 +75,7 @@ function TechnologiesNavDropdown({ label }: { label: string }) {
             key={techItem.title}
             className={cn(
               "cursor-pointer rounded-none border-0 bg-transparent px-0 py-0",
-              "font-roboto text-base font-medium leading-none tracking-normal text-navlink-dropdown-text",
+              "font-roboto text-sm md:text-base font-medium leading-none tracking-normal text-navlink-dropdown-text",
               "outline-none focus:bg-transparent! focus:text-primary!",
               "data-highlighted:bg-transparent! data-highlighted:text-primary!",
             )}
@@ -93,7 +93,7 @@ function TechnologiesNavDropdown({ label }: { label: string }) {
 
 const NavItems = () => {
   return (
-    <div className="flex items-center gap-4.25!\ mlllgap-20 lg:gap-[95px]">
+    <div className="flex items-center gap-4.25! mlllgap-20 lg:gap-[95px]">
       {menuItems.map((item) =>
         item.hasDropdown ? (
           <TechnologiesNavDropdown key={item.title} label={item.title} />

@@ -4,9 +4,9 @@ import TechnologiesHeaderSection from "@/components/page-components/Home/Technol
 
 const TechnologiesSection = () => {
     return (
-        <div className="bg-background w-full pt-15.75 pb-22.5">
+        <div className="bg-background w-full pt-10.5 md:pt-14 lg:pt-15.75 pb-15 md:pb-16.5 lg:pb-22.5">
             <Container>
-                <div className="flex flex-col gap-11.25">
+                <div className="flex flex-col gap-6.25 md:gap-8.75 lg:gap-11.25">
                     <TechnologiesHeaderSection />
                     <TechnologiesBodySection />
                 </div>

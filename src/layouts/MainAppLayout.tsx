@@ -80,7 +80,7 @@ const MainAppLayoutContent = ({ children }: { children: React.ReactNode }) => {
         <div>{children}</div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

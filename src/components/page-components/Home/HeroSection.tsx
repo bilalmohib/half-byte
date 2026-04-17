@@ -15,11 +15,11 @@ const HeroSection = () => {
                             Amplifying Digital Power
                         </Paragraph>
                     </div>
-                    <div className="border border-[#C3C3C3] rounded-[62px] p-2 flex flex-row w-[364px]! mllg:w-[484px]! bg-white mx-auto">
-                        <Button variant="default" className="bg-primary! w-36.5! mllg:w-55! h-13! mllg:h-15! hover:bg-buttonHover! rounded-[53px]! p-2.5! text-base! mllg:text-xl! font-roboto font-normal">
+                    <div className="border border-transparent ssm:border-[#C3C3C3] rounded-none ssm:rounded-[62px] ssm:p-2 flex flex-col gap-4 ssm:gap-0 ssm:flex-row ssm:max-w-full mllg:w-[484px]! bg-transparent ssm:bg-white mx-auto">
+                        <Button variant="default" className="bg-primary! w-full ssm:w-36.5! mllg:w-55! h-13! mllg:h-15! hover:bg-buttonHover! rounded-lg ssm:rounded-[53px]! p-2.5! text-base! mllg:text-xl! font-roboto font-normal">
                             Contact Us
                         </Button>
-                        <Button variant="default" className="bg-transparent! hover:bg-transparent! rounded-[53px]! p-2.5! flex justify-center mx-auto items-center w-fit! mllg:w-55! h-13! mllg:h-15! text-base! mllg:text-xl! text-heading font-roboto font-normal">
+                        <Button variant="default" className="bg-white! ssm:bg-transparent! hover:bg-transparent! rounded-lg ssm:rounded-[53px]! px-8 py-2.5! ssm:px-2.5! ssm:py-2.5! flex justify-center mx-auto items-center max-w-full ssm:max-w-fit! mllg:w-55! h-13! mllg:h-15! text-base! mllg:text-xl! text-heading font-roboto font-normal">
                             Explore Technologies
                         </Button>
                     </div>

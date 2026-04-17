@@ -10,7 +10,7 @@ export interface IAboutUsReasonsData {
 
 export const aboutUsReasonsData: IAboutUsReasonsData[] = [
     {
-        info: "Security-Driven <br /> Architecture",
+        info: "Security-Driven <br class='hidden ssmd:block' /> Architecture",
         image: {
             src: "/assets/pages/Home/AboutUsSection/AboutUsReasons/carbon_security.png",
             alt: "Security-Driven Architecture",
@@ -19,7 +19,7 @@ export const aboutUsReasonsData: IAboutUsReasonsData[] = [
         },
     },
     {
-        info: "Multi-Industry <br /> Expertise",
+        info: "Multi-Industry <br class='hidden ssmd:block' /> Expertise",
         image: {
             src: "/assets/pages/Home/AboutUsSection/AboutUsReasons/carbon_enterprise.svg",
             alt: "Multi-Industry Expertise",
@@ -28,7 +28,7 @@ export const aboutUsReasonsData: IAboutUsReasonsData[] = [
         }
     },
     {
-        info: "Scalable Enterprise <br /> Solutions",
+        info: "Scalable Enterprise <br class='hidden ssmd:block' /> Solutions",
         image: {
             src: "/assets/pages/Home/AboutUsSection/AboutUsReasons/material-symbols_enterprise-outline.svg",
             alt: "Scalable Enterprise Solutions",

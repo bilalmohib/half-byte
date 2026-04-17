@@ -6,6 +6,8 @@ interface IOurPartnersData {
         alt: string;
         width: number;
         height: number;
+        mobileWidth: number;
+        mobileHeight: number;
     }
 }
 
@@ -17,7 +19,9 @@ export const ourPartnersData: IOurPartnersData[] = [
             src: "/assets/pages/Home/OurPartners/cisco.svg",
             alt: "Cisco",
             width: 112,
-            height: 57
+            height: 57,
+            mobileWidth: 80,
+            mobileHeight: 80
         },
 
     },
@@ -29,6 +33,8 @@ export const ourPartnersData: IOurPartnersData[] = [
             alt: "Zoom",
             width: 97,
             height: 23,
+            mobileWidth: 80,
+            mobileHeight: 20
         }
     },
     {
@@ -38,7 +44,9 @@ export const ourPartnersData: IOurPartnersData[] = [
             src: "/assets/pages/Home/OurPartners/nokia.png",
             alt: "Nokia",
             width: 121,
-            height: 21
+            height: 21,
+            mobileWidth: 80,
+            mobileHeight: 20
         }
     },
     {
@@ -48,7 +56,9 @@ export const ourPartnersData: IOurPartnersData[] = [
             src: "/assets/pages/Home/OurPartners/huawei.png",
             alt: "Huawei",
             width: 64,
-            height: 65
+            height: 65,
+            mobileWidth: 40,
+            mobileHeight: 40
         }
     },
     {
@@ -58,7 +68,9 @@ export const ourPartnersData: IOurPartnersData[] = [
             src: "/assets/pages/Home/OurPartners/intel.png",
             alt: "Intel",
             width: 86,
-            height: 55
+            height: 55,
+            mobileWidth: 80,
+            mobileHeight: 40
         }
     },
     {
@@ -68,7 +80,9 @@ export const ourPartnersData: IOurPartnersData[] = [
             src: "/assets/pages/Home/OurPartners/microsoft.png",
             alt: "Microsoft",
             width: 149,
-            height: 31
+            height: 31,
+            mobileWidth: 100,
+            mobileHeight: 25
         }
     }
 ];
