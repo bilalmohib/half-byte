@@ -10,10 +10,10 @@ const AboutUsHeaderSection = () => {
                     About us
                 </Paragraph>
             </Badge>
-            <Heading2 className="lg:text-[48px]! leading-11.5 lg:leading-15.5!">
+            <Heading2 className="text-[32px]! md:text-4xl! lg:text-[48px]! leading-10.25! md:leading-11.5! lg:leading-15.5!">
                 Why Choose Half Byte?
             </Heading2>
-            <Paragraph className="text-navlink-text! leading-6.75!">
+            <Paragraph className="text-navlink-text! leading-5! md:leading-5.25! lg:leading-6.75!">
                 Half Byte is a Saudi company that bridges the gap between business needs and complex technology—delivering practical, secure, and scalable solutions for organizations at any stage of digital maturity.
             </Paragraph>
         </div>

@@ -5,9 +5,9 @@ import OurNewsAndCareersHeaderSection from "@/components/page-components/Home/Ou
 
 const OurNewsAndCareersSection = () => {
     return (
-        <Container className="bg-background rounded-[10px] py-17.5">
-            <Container className="max-w-[1250px] mx-auto flex flex-col gap-10.5">
-                <div className="flex flex-col gap-17.5">
+        <Container className="bg-background rounded-[5px] md:rounded-[10px] py-10.5 md:py-17.25 lg:py-17.5">
+            <Container className="max-w-[1250px] mx-auto flex flex-col gap-8.5 md:gap-8.25 lg:gap-10.5">
+                <div className="flex flex-col gap-10 md:gap-13.25 lg:gap-17.5">
                     <OurNewsAndCareersHeaderSection />
                     <OurNewsBodySection />
                 </div>

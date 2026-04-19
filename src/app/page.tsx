@@ -14,10 +14,10 @@ export default function Home() {
       <OurPartnersSection />
       <TechnologiesSection />
       <AboutUsSection />
-      {/* <OurValuesSection /> */}
-      {/* <OurStrategicGoalsSection />
+      <OurValuesSection />
+      <OurStrategicGoalsSection />
       <OurNewsAndCareersSection />
-      <ContactUsSection />
+      {/* <ContactUsSection />
       <CallToActionSection /> */}
     </div>
   );

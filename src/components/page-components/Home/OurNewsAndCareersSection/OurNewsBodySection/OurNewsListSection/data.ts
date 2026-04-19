@@ -1,5 +1,5 @@
 export interface IOurNewsSectionData {
-    id: number;
+    id: number | string;
     image: {
         src: string;
         alt: string;
@@ -9,6 +9,8 @@ export interface IOurNewsSectionData {
     title: string;
     description: string;
     date: string;
+    /** Present for live NewsData.io articles — opens in a new tab */
+    link?: string;
 }
 
 export const ourNewsSectionData: IOurNewsSectionData[] = [

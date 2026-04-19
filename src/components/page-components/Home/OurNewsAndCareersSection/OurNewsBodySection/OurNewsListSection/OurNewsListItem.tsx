@@ -7,10 +7,30 @@ interface IOurNewsListItemProps {
 }
 
 const OurNewsListItem = ({ data }: IOurNewsListItemProps) => {
-    return (
-        <div className="px-2.25 py-1.75 bg-background border border-[#BABABA] border-solid rounded-[5px] cursor-pointer flex flex-col gap-2.75">
+    const isRemoteImage = data.image.src.startsWith("http");
+
+    const inner = (
+        <>
             <div className="flex flex-col gap-2">
-                <Image src={data.image.src} alt={data.image.alt} width={data.image.width} height={data.image.height} className="w-full h-42.5" />
+                {isRemoteImage ? (
+                    // eslint-disable-next-line @next/next/no-img-element -- dynamic publisher URLs from NewsData.io
+                    <img
+                        src={data.image.src}
+                        alt={data.image.alt}
+                        width={data.image.width}
+                        height={data.image.height}
+                        className="w-full h-42.5 object-cover rounded-[2px]"
+                        loading="lazy"
+                    />
+                ) : (
+                    <Image
+                        src={data.image.src}
+                        alt={data.image.alt}
+                        width={data.image.width}
+                        height={data.image.height}
+                        className="w-full h-42.5"
+                    />
+                )}
                 <Paragraph className="text-[#575757]! text-sm! leading-4.5!">
                     {data.date}
                 </Paragraph>
@@ -23,6 +43,23 @@ const OurNewsListItem = ({ data }: IOurNewsListItemProps) => {
                     {data.description}
                 </Paragraph>
             </div>
+        </>
+    );
+
+    return (
+        <div className="px-2.25 py-1.75 bg-background border border-[#BABABA] border-solid rounded-[5px] flex flex-col gap-2.75">
+            {data.link ? (
+                <a
+                    href={data.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer flex flex-col gap-2.75 no-underline text-inherit"
+                >
+                    {inner}
+                </a>
+            ) : (
+                <div className="cursor-pointer flex flex-col gap-2.75">{inner}</div>
+            )}
         </div>
     );
 };
