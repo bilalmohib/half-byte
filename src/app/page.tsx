@@ -18,7 +18,7 @@ export default function Home() {
       <OurStrategicGoalsSection />
       <OurNewsAndCareersSection />
       <ContactUsSection />
-      {/* <CallToActionSection /> */}
+      <CallToActionSection />
     </div>
   );
 }

@@ -4,8 +4,8 @@ import { Heading2 } from "@/components/common/Typography";
 
 const CallToActionSection = () => {
     return (
-        <div className="pb-22.75 h-auto">
-            <Container className="relative w-full overflow-hidden rounded-[10px] bg-primary">
+        <Container className="pb-12.5 md:pb-18 lg:pb-22.75 h-auto">
+            <div className="relative w-full overflow-hidden rounded-[10px] bg-primary">
                 <div
                     className="pointer-events-none absolute inset-0 overflow-hidden rounded-[10px]"
                     aria-hidden
@@ -19,21 +19,21 @@ const CallToActionSection = () => {
                     {/* Bottom-right: arc from the corner */}
                     <div className="absolute -bottom-[28%] -right-[24%] size-[min(78vw,400px)] rounded-full border border-[#ADEBCA4D] sm:-bottom-40 sm:-right-15 sm:size-[340px]" />
                 </div>
-                <div className="relative z-10 flex flex-col gap-15.75 pt-28.75 pb-26.5">
-                    <Heading2 className="lg:text-5xl! leading-tight! md:leading-15.5! text-white! text-center!">
+                <div className="relative z-10 flex flex-col gap-6.25 md:gap-11.5 lg:gap-15.75 pt-24.75 lg:pt-28.75 pb-24.75 md:pb-24.25 lg:pb-26.5 px-4">
+                    <Heading2 className="text-[32px]! sm:text-4xl! md:text-4xl! lg:text-5xl! leading-tight! md:leading-15.5! text-white! text-center!">
                         Ready to Elevate Your Business with <br className="hidden md:block" /> Smart Technology?
                     </Heading2>
-                    <div className="flex flex-row gap-5 justify-center items-center">
-                        <Button variant="default" className="bg-white! w-55! h-15! hover:bg-buttonHover! border border-white border-solid text-primary! rounded-[53px]! p-2.5! text-xl font-normal">
+                    <div className="flex flex-col ssm:flex-row gap-2.75 md:gap-5.5 lg:gap-5 justify-center items-center">
+                        <Button variant="default" className="bg-white! w-full ssm:w-38.25! md:w-47.5! lg:w-55! h-11! md:h-13.5! lg:h-15! hover:bg-buttonHover! border border-white border-solid text-primary! rounded-[53px]! p-2.5! text-[15px] md:text-base lg:text-xl font-normal">
                             Get A Consultation
                         </Button>
-                        <Button variant="default" className="bg-transparent! w-55! h-15! hover:bg-transparent! text-white! border border-white border-solid rounded-[53px]! p-2.5! text-xl font-roboto font-normal">
+                        <Button variant="default" className="bg-transparent! w-full ssm:w-38.25! md:w-47.5! lg:w-55! h-11! md:h-13.5! lg:h-15! hover:bg-transparent! text-white! border border-white border-solid rounded-[53px]! p-2.5! text-[15px] md:text-base lg:text-xl font-roboto font-normal">
                             Contact Us
                         </Button>
                     </div>
                 </div>
-            </Container>
-        </div>
+            </div>
+        </Container>
     );
 };
 
