@@ -17,8 +17,8 @@ export default function Home() {
       <OurValuesSection />
       <OurStrategicGoalsSection />
       <OurNewsAndCareersSection />
-      {/* <ContactUsSection />
-      <CallToActionSection /> */}
+      <ContactUsSection />
+      {/* <CallToActionSection /> */}
     </div>
   );
 }

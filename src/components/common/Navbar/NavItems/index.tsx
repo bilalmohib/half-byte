@@ -1,20 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { ChevronDown } from "lucide-react";
+import { useRouter } from "next/navigation";
 import {
   menuItems,
   technologyItems,
 } from "@/components/common/Navbar/NavItems/data";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const HOVER_CLOSE_DELAY_MS = 150;
 
@@ -93,7 +93,7 @@ function TechnologiesNavDropdown({ label }: { label: string }) {
 
 const NavItems = () => {
   return (
-    <div className="flex items-center gap-4.25! mlllgap-20 lg:gap-[95px]">
+    <div className="flex items-center w-full gap-4.25 mllg:gap-20 lg:gap-[95px]">
       {menuItems.map((item) =>
         item.hasDropdown ? (
           <TechnologiesNavDropdown key={item.title} label={item.title} />

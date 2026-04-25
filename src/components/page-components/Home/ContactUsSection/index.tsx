@@ -9,7 +9,7 @@ const ContactUsSection = () => {
             <ContactUsHeaderSection />
             <div className="flex flex-col gap-15">
                 <ContactUsItemsSection />
-                <ContactUsFollowUsSection />
+                {/* <ContactUsFollowUsSection /> */}
             </div>
         </Container>
     )
