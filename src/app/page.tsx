@@ -11,14 +11,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <HeroSection />
-      <OurPartnersSection />
+      {/* <OurPartnersSection /> */}
       <TechnologiesSection />
       <AboutUsSection />
       <OurValuesSection />
       <OurStrategicGoalsSection />
       <OurNewsAndCareersSection />
       <ContactUsSection />
-      {/* <CallToActionSection /> */}
+      <CallToActionSection />
     </div>
   );
 }

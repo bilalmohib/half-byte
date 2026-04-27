@@ -7,6 +7,8 @@ export interface IFollowUsData {
         alt: string;
         width: number;
         height: number;
+        mobileWidth: number;
+        mobileHeight: number;
     }
 }
 
@@ -19,7 +21,9 @@ export const followUsData: IFollowUsData[] = [
             src: "/assets/pages/Home/ContactUsSection/ContactUsFollowUsSection/twitter.png",
             alt: "X",
             width: 54,
-            height: 54
+            height: 54,
+            mobileWidth: 42,
+            mobileHeight: 42
         }
     },
     {
@@ -30,7 +34,9 @@ export const followUsData: IFollowUsData[] = [
             src: "/assets/pages/Home/ContactUsSection/ContactUsFollowUsSection/linkedin.png",
             alt: "LinkedIn",
             width: 54,
-            height: 54
+            height: 54,
+            mobileWidth: 42,
+            mobileHeight: 42
         }
     },
     {
@@ -41,7 +47,9 @@ export const followUsData: IFollowUsData[] = [
             src: "/assets/pages/Home/ContactUsSection/ContactUsFollowUsSection/facebook.png",
             alt: "Facebook",
             width: 54,
-            height: 54
+            height: 54,
+            mobileWidth: 42,
+            mobileHeight: 42
         }
     },
     {
@@ -52,7 +60,9 @@ export const followUsData: IFollowUsData[] = [
             src: "/assets/pages/Home/ContactUsSection/ContactUsFollowUsSection/instagram.png",
             alt: "Instagram",
             width: 54,
-            height: 54
+            height: 54,
+            mobileWidth: 42,
+            mobileHeight: 42
         }
     },
     {
@@ -63,7 +73,9 @@ export const followUsData: IFollowUsData[] = [
             src: "/assets/pages/Home/ContactUsSection/ContactUsFollowUsSection/snapchat.png",
             alt: "Snapchat",
             width: 54,
-            height: 54
+            height: 54,
+            mobileWidth: 42,
+            mobileHeight: 42
         }
     },
     {
@@ -74,7 +86,9 @@ export const followUsData: IFollowUsData[] = [
             src: "/assets/pages/Home/ContactUsSection/ContactUsFollowUsSection/ticktok.png",
             alt: "TikTok",
             width: 54,
-            height: 54
+            height: 54,
+            mobileWidth: 42,
+            mobileHeight: 42
         }
     }
 ]
