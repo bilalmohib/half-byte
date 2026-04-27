@@ -187,7 +187,7 @@ const Footer = ({ className }: FooterProps) => {
 
         {/* Bottom: divider + social (image2) — all icons from followUsData */}
         <div className="mt-14 border-b mb-16 border-[#E5E5E5] pt-8 pb-10 md:mt-0 md:pb-12">
-          <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-10 sm:gap-y-3">
+          <div className="flex flex-col gap-4 md:gap-5 lg:gap-6 sm:items-start">
             <Paragraph className="text-navlink-dropdown-text! lg:text-xl!">
               Follow us
             </Paragraph>
