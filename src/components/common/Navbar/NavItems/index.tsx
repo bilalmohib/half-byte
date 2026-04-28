@@ -9,7 +9,12 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import {
+  technologiesHomeHref,
+  scrollToHomeSectionById,
+  tryScrollToHashFromHref,
+} from "@/lib/hash-nav";
 import {
   menuItems,
   technologyItems,
@@ -20,6 +25,7 @@ const HOVER_CLOSE_DELAY_MS = 150;
 
 function TechnologiesNavDropdown({ label }: { label: string }) {
   const router = useRouter();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -45,6 +51,15 @@ function TechnologiesNavDropdown({ label }: { label: string }) {
           setOpen(true);
         }}
         onPointerLeave={scheduleClose}
+        onClick={(e) => {
+          e.preventDefault();
+          if (pathname === "/") {
+            scrollToHomeSectionById("technologies");
+          } else {
+            router.push("/#technologies");
+          }
+          setOpen(false);
+        }}
         className={cn(
           "font-roboto text-base mllg:text-lg lg:text-xl font-normal leading-none tracking-normal text-navlink-text",
           "flex items-center gap-1 border-0 bg-transparent p-0 outline-none",
@@ -80,7 +95,10 @@ function TechnologiesNavDropdown({ label }: { label: string }) {
               "data-highlighted:bg-transparent! data-highlighted:text-primary!",
             )}
             onSelect={() => {
-              router.push(techItem.href);
+              router.push(technologiesHomeHref(techItem.slug), {
+                scroll: false,
+              });
+              setOpen(false);
             }}
           >
             {techItem.title}
@@ -92,6 +110,7 @@ function TechnologiesNavDropdown({ label }: { label: string }) {
 }
 
 const NavItems = () => {
+  const pathname = usePathname();
   return (
     <div className="flex items-center w-full gap-4.25 mllg:gap-20 lg:gap-[95px]">
       {menuItems.map((item) =>
@@ -101,6 +120,8 @@ const NavItems = () => {
           <Link
             key={item.title}
             href={item.href}
+            scroll={item.href.includes("#") ? false : undefined}
+            onClick={(e) => tryScrollToHashFromHref(e, item.href, pathname)}
             className={cn(
               "font-roboto text-base mllg:text-lg lg:text-xl font-normal leading-none tracking-normal text-navlink-text",
               "shrink-0 hover:text-primary transition-colors",

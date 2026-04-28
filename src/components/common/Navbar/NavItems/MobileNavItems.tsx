@@ -10,6 +10,7 @@ import {
 } from "@/components/common/Navbar/NavItems/data";
 import { ChevronRight, ChevronDown } from "lucide-react";
 import { ContactUsButton } from "@/components/common/Navbar/NavItems/ContactUsButton";
+import { tryScrollToHashFromHref } from "@/lib/hash-nav";
 
 interface MobileNavItemsProps {
   onLinkClick: () => void;
@@ -39,29 +40,46 @@ function MobileNavItems({ onLinkClick }: MobileNavItemsProps) {
             <li key={item.title} className="list-none">
               {item.hasDropdown ? (
                 <div className="flex flex-col">
-                  <button
-                    type="button"
-                    onClick={() => toggleItem(item.title)}
-                    className="flex w-full items-center justify-between rounded-xl px-4 py-3.5 text-left transition-all cursor-pointer hover:bg-gray-50 border-0 bg-transparent"
-                  >
-                    <span className="font-roboto text-base mllg:text-lg lg:text-xl font-normal leading-none tracking-normal text-navlink-text">
-                      {item.title}
-                    </span>
-                    <ChevronDown
+                  <div className="flex w-full min-h-[52px] items-stretch overflow-hidden rounded-xl border-0 bg-transparent">
+                    <Link
+                      href={item.href}
+                      scroll={item.href.includes("#") ? false : undefined}
+                      onClick={(e) => {
+                        tryScrollToHashFromHref(e, item.href, pathname);
+                        onLinkClick();
+                      }}
                       className={cn(
-                        "size-3 shrink-0 text-navlink-text transition-transform duration-200",
-                        isOpen && "rotate-180",
+                        "font-roboto text-base mllg:text-lg lg:text-xl font-normal leading-none tracking-normal text-navlink-text",
+                        "flex flex-1 items-center px-4 py-3.5 text-left transition-colors hover:bg-gray-50",
+                        isActive(item.href) && "text-primary!",
                       )}
-                      strokeWidth={2.5}
-                    />
-                  </button>
+                    >
+                      {item.title}
+                    </Link>
+                    <button
+                      type="button"
+                      onClick={() => toggleItem(item.title)}
+                      className="flex shrink-0 items-center justify-center border-0 border-l border-gray-100 bg-transparent px-3 transition-colors hover:bg-gray-50"
+                      aria-expanded={isOpen}
+                      aria-label="Toggle technologies submenu"
+                    >
+                      <ChevronDown
+                        className={cn(
+                          "size-3 shrink-0 text-navlink-text transition-transform duration-200",
+                          isOpen && "rotate-180",
+                        )}
+                        strokeWidth={2.5}
+                      />
+                    </button>
+                  </div>
 
                   {isOpen && (
                     <div className="flex flex-col gap-[19px] py-2 pl-4">
                       {technologyItems.map((techItem) => (
                         <Link
-                          key={techItem.title}
+                          key={techItem.slug}
                           href={techItem.href}
+                          scroll={false}
                           onClick={onLinkClick}
                           className={cn(
                             "block font-roboto text-sm md:text-base font-light md:font-medium leading-none tracking-normal transition-colors hover:text-primary",
@@ -79,7 +97,11 @@ function MobileNavItems({ onLinkClick }: MobileNavItemsProps) {
               ) : (
                 <Link
                   href={item.href}
-                  onClick={onLinkClick}
+                  scroll={item.href.includes("#") ? false : undefined}
+                  onClick={(e) => {
+                    tryScrollToHashFromHref(e, item.href, pathname);
+                    onLinkClick();
+                  }}
                   aria-current={isActive(item.href) ? "page" : undefined}
                   className={cn(
                     "font-roboto text-base mllg:text-lg lg:text-xl font-normal leading-none tracking-normal text-navlink-text",

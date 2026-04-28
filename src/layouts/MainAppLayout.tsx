@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { AUTH_ROUTES } from "@/lib/constants";
@@ -8,6 +8,7 @@ import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import { NavbarProvider } from "@/contexts/NavbarContext";
 import ScrollRestoration from "@/components/common/ScrollRestoration";
+import HashScrollIntoView from "@/components/common/HashScrollIntoView";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -62,6 +63,9 @@ const MainAppLayoutContent = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
       <ScrollRestoration />
+      <Suspense fallback={null}>
+        <HashScrollIntoView />
+      </Suspense>
       <div
         className={cn("w-full z-50", {
           "absolute left-0 right-0": isNavTransparent,

@@ -6,7 +6,7 @@ import AboutUsHeaderSection from "@/components/page-components/Home/AboutUsSecti
 
 const AboutUsSection = () => {
     return (
-        <div className="bg-white">
+        <section id="about-us" className="scroll-mt-32 bg-white">
             <Container className="grid grid-cols-1 gap-7.5 md:gap-10.75 lg:gap-0 lg:grid-cols-2 py-22.5 md:py-27.5 lg:py-35">
                 <div>
                     <div className="flex flex-col gap-7 md:gap-8.75 lg:gap-11.5">
@@ -39,7 +39,7 @@ const AboutUsSection = () => {
                 <div className="col-span-1 md:col-span-4 lg:col-span-2 rounded-[10px] w-full h-[241px] md:h-full relative bg-image-about-us-bottom-right-image bg-cover bg-center bg-no-repeat">
                 </div>
             </Container>
-        </div>
+        </section>
     );
 };
 
