@@ -1,8 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { goToHomeSection } from "@/lib/hash-nav";
 
 type ContactUsButtonProps = {
   onNavigate?: () => void;
@@ -10,6 +11,7 @@ type ContactUsButtonProps = {
 
 export function ContactUsButton({ onNavigate }: ContactUsButtonProps) {
   const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <Button
@@ -17,7 +19,7 @@ export function ContactUsButton({ onNavigate }: ContactUsButtonProps) {
       variant="default"
       onClick={() => {
         onNavigate?.();
-        router.push("/contact");
+        goToHomeSection("contact-us", pathname, router);
       }}
       className={cn(
         "bg-primary! hover:bg-buttonHover!",

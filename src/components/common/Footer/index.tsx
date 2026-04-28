@@ -11,6 +11,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { MapPin, Mail, Phone } from "lucide-react";
 import { FormEvent, useMemo, useState } from "react";
+import { usePathname } from "next/navigation";
+import { tryScrollToHashFromHref } from "@/lib/hash-nav";
 import Container from "@/components/common/Container";
 import { Heading5, Paragraph } from "@/components/common/Typography";
 import { followUsData } from "@/components/page-components/Home/ContactUsSection/ContactUsFollowUsSection/data";
@@ -68,6 +70,7 @@ interface FooterProps {
 }
 
 const Footer = ({ className }: FooterProps) => {
+  const pathname = usePathname();
   const orderedSocial = useMemo(
     () =>
       footerSocialNames
@@ -169,6 +172,10 @@ const Footer = ({ className }: FooterProps) => {
                 <Link
                   key={item.href}
                   href={item.href}
+                  scroll={item.href.includes("#") ? false : undefined}
+                  onClick={(e) =>
+                    tryScrollToHashFromHref(e, item.href, pathname)
+                  }
                   className="no-underline"
                 >
                   <Paragraph className="text-[#1A1A1A]! hover:text-primary">

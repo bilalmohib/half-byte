@@ -90,7 +90,9 @@ export default function ScrollRestoration() {
         const { pathname: savedPathname } = JSON.parse(savedData);
         if (savedPathname !== pathname) {
           sessionStorage.removeItem(SCROLL_POSITION_KEY);
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          if (!window.location.hash) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
         }
       }
 

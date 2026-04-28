@@ -1,7 +1,8 @@
 export const quickLinks = [
-  { title: "About Us", href: "/about" },
-  { title: "Technologies", href: "/technologies" },
-  { title: "Contact Us", href: "/contact" },
+  { title: "About Us", href: "/#about-us" },
+  { title: "Technologies", href: "/#technologies" },
+  { title: "News & Careers", href: "/#news-careers" },
+  { title: "Contact Us", href: "/#contact-us" },
 ] as const;
 
 export const footerContact = {

@@ -1,27 +1,26 @@
+import { technologiesBodySectionData } from "@/components/page-components/Home/TechnologiesSection/TechnologiesBodySection/data";
+import { technologiesHomeHref } from "@/lib/hash-nav";
+
 export const menuItems = [
   {
-    title: "About",
-    href: "/about",
+    title: "About Us",
+    href: "/#about-us",
     hasDropdown: false,
   },
   {
     title: "Technologies",
-    href: "/technologies",
+    href: "/#technologies",
     hasDropdown: true,
   },
   {
     title: "News & Careers",
-    href: "/news",
+    href: "/#news-careers",
     hasDropdown: false,
   },
 ];
 
-export const technologyItems = [
-  { title: "AI Enablement", href: "/technologies/ai-enablement" },
-  { title: "Systems Integration", href: "/technologies/systems-integration" },
-  { title: "Cloud Orchestration", href: "/technologies/cloud-orchestration" },
-  { title: "Managed Services", href: "/technologies/managed-services" },
-  { title: "Cybersecurity Services", href: "/technologies/cybersecurity-services" },
-  { title: "Technology Consultancy", href: "/technologies/technology-consultancy" },
-  { title: "GRC Intelligence", href: "/technologies/grc-intelligence" },
-];
+export const technologyItems = technologiesBodySectionData.map((t) => ({
+  title: t.title,
+  slug: t.slug,
+  href: technologiesHomeHref(t.slug),
+}));
