@@ -15,7 +15,7 @@ export const Heading1 = ({
 }: TypographyProps) => {
   return as === "h1" ? (
     <h1
-      className={`font-roboto font-bold text-[28px] md:text-[32px] lg:text-[52px] leading-normal md:leading-[142%] tracking-[0%] text-heading ${className}`}
+      className={`font-roboto font-bold text-[26px] md:text-[30px] lg:text-[50px] leading-normal md:leading-[142%] tracking-[0%] text-heading ${className}`}
       dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       style={style}
     >
@@ -23,7 +23,7 @@ export const Heading1 = ({
     </h1>
   ) : (
     <h2
-      className={`font-roboto font-bold text-[28px] md:text-[32px] lg:text-[52px] leading-normal md:leading-[142%] tracking-[0%] text-heading ${className}`}
+      className={`font-roboto font-bold text-[26px] md:text-[30px] lg:text-[50px] leading-normal md:leading-[142%] tracking-[0%] text-heading ${className}`}
       dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       style={style}
     >
@@ -40,7 +40,7 @@ export const Heading2 = ({
 }: TypographyProps) => {
   return (
     <h2
-      className={`font-roboto font-bold text-[28px] sm:text-4xl lg:text-[46px] leading-normal md:leading-[142%] text-heading ${className}`}
+      className={`font-roboto font-bold text-[26px] sm:text-[34px] lg:text-[44px] leading-normal md:leading-[142%] text-heading ${className}`}
       dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       style={style}
     >
@@ -57,7 +57,7 @@ export const Heading3 = ({
 }: TypographyProps) => {
   return (
     <h3
-      className={`font-roboto font-bold text-2xl mllg:text-3xl lg:text-[32px] leading-normal md:leading-[142%] text-heading ${className}`}
+      className={`font-roboto font-bold text-[22px] mllg:text-[28px] lg:text-[30px] leading-normal md:leading-[142%] text-heading ${className}`}
       dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       style={style}
     >
@@ -74,7 +74,7 @@ export const Heading4 = ({
 }: TypographyProps) => {
   return (
     <h4
-      className={`font-roboto font-bold text-xl md:text-2xl lg:text-[28px] leading-normal md:leading-[142%] tracking-[0%] text-heading ${className}`}
+      className={`font-roboto font-bold text-[18px] md:text-[22px] lg:text-[26px] leading-normal md:leading-[142%] tracking-[0%] text-heading ${className}`}
       dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       style={style}
     >
@@ -91,7 +91,7 @@ export const Heading5 = ({
 }: TypographyProps) => {
   return (
     <h5
-      className={`font-roboto font-bold text-xl lg:text-2xl leading-normal md:leading-[142%] tracking-[0%] text-heading ${className}`}
+      className={`font-roboto font-bold text-[18px] lg:text-[22px] leading-normal md:leading-[142%] tracking-[0%] text-heading ${className}`}
       dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       style={style}
     >
@@ -108,7 +108,7 @@ export const Heading6 = ({
 }: TypographyProps) => {
   return (
     <h6
-      className={`font-roboto font-bold text-base lg:text-xl leading-normal md:leading-[142%] tracking-[0%] text-heading ${className}`}
+      className={`font-roboto font-bold text-[14px] lg:text-[18px] leading-normal md:leading-[142%] tracking-[0%] text-heading ${className}`}
       dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       style={style}
     >
@@ -125,7 +125,7 @@ export const Paragraph = ({
 }: TypographyProps) => {
   return (
     <p
-      className={`font-roboto font-normal text-[15px] md:text-base lg:text-lg leading-normal md:leading-[142%] tracking-[0%] text-heading ${className}`}
+      className={`font-roboto font-normal text-[13px] md:text-[14px] lg:text-[16px] leading-normal md:leading-[142%] tracking-[0%] text-heading ${className}`}
       dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       style={style}
     >
