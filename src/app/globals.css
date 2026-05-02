@@ -71,6 +71,16 @@
 
   --font-sans: var(--font-roboto-next), ui-sans-serif, system-ui, sans-serif;
   --font-roboto: var(--font-roboto-next), ui-sans-serif, system-ui, sans-serif;
+  --text-xs: 0.625rem;
+  --text-sm: 0.75rem;
+  --text-base: 0.875rem;
+  --text-lg: 1rem;
+  --text-xl: 1.125rem;
+  --text-2xl: 1.375rem;
+  --text-3xl: 1.75rem;
+  --text-4xl: 2.125rem;
+  --text-5xl: 2.875rem;
+  --text-6xl: 3.625rem;
 
   --breakpoint-4xl: 1920px;
   --breakpoint-3xl: 1700px;
@@ -497,32 +507,32 @@ body {
 
 /* Default (above 1230px) */
 .glassbox-heading {
-  font-size: 56px;
+  font-size: 54px;
 }
 
 .glassbox-text {
-  font-size: 32px;
+  font-size: 30px;
 }
 
 /* ≤ 1230px */
 @media (max-width: 1230px) {
   .glassbox-heading {
-    font-size: 44px;
+    font-size: 42px;
   }
 
   .glassbox-text {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
 @media (max-width: 1024px) {
   .glassbox-heading {
     top: 30px;
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .glassbox-text {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -530,17 +540,7 @@ body {
   .glassbox-heading {
     top: 20px;
 
-    font-size: 20px;
-  }
-
-  .glassbox-text {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 500px) {
-  .glassbox-heading {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .glassbox-text {
@@ -548,14 +548,24 @@ body {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .glassbox-heading {
-    top: 10px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .glassbox-text {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .glassbox-heading {
+    top: 10px;
+    font-size: 14px;
+  }
+
+  .glassbox-text {
+    font-size: 8px;
   }
 }
 

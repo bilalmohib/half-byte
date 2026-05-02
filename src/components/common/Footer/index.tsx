@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Mail, Phone } from "lucide-react";
 import { FormEvent, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
+import toast from "react-hot-toast";
 import { tryScrollToHashFromHref } from "@/lib/hash-nav";
 import Container from "@/components/common/Container";
 import { Heading5, Paragraph } from "@/components/common/Typography";
@@ -29,8 +30,20 @@ function ContactIconCircle({ children }: { children: React.ReactNode }) {
 function FooterNewsletter() {
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const trimmed = email.trim();
+    if (!trimmed) {
+      toast.error("Please enter your email address.");
+      return;
+    }
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed);
+    if (!emailOk) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
+    toast.success("You’re subscribed! Thanks for joining our newsletter.");
     setEmail("");
   };
 

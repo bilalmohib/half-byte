@@ -23,7 +23,7 @@ export function ContactUsButton({ onNavigate }: ContactUsButtonProps) {
       }}
       className={cn(
         "bg-primary! hover:bg-buttonHover!",
-        "font-roboto! text-[20px]! font-normal! leading-[124%]! tracking-normal! text-white!",
+        "font-roboto! text-[18px]! font-normal! leading-[124%]! tracking-normal! text-white!",
         "box-border h-[46px]! w-[146px]! shrink-0 rounded-[32px]! p-[10px]!",
         "shadow-none!",
       )}

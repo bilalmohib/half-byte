@@ -10,7 +10,7 @@ const AboutUsHeaderSection = () => {
                     About us
                 </Paragraph>
             </Badge>
-            <Heading2 className="text-[32px]! md:text-4xl! lg:text-[48px]! leading-10.25! md:leading-11.5! lg:leading-15.5!">
+            <Heading2 className="text-[30px]! md:text-4xl! lg:text-[46px]! leading-10.25! md:leading-11.5! lg:leading-15.5!">
                 Why Choose Half Byte?
             </Heading2>
             <Paragraph className="text-navlink-text! leading-5! md:leading-5.25! lg:leading-6.75!">

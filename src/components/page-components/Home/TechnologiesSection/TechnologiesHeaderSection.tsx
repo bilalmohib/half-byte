@@ -10,7 +10,7 @@ const TechnologiesHeaderSection = () => {
                     Technologies
                 </Paragraph>
             </Badge>
-            <Heading2 className="lg:text-[48px]! leading-normal lg:leading-15.5!">
+            <Heading2 className="lg:text-[46px]! leading-normal lg:leading-15.5!">
                 Technologies
             </Heading2>
         </div>

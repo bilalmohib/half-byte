@@ -21,7 +21,7 @@ const AboutUsSection = () => {
 
             <Container className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-10 gap-3.5 lg:gap-9.5">
                 <div className="col-span-1 md:col-span-4 lg:col-span-4 flex flex-col gap-3.75 lg:gap-5 bg-background rounded-[10px] py-7 md:py-8 lg:py-10.5 px-5.5 md:px-5 lg:px-9.25">
-                    <Heading2 className="text-[32px]! md:text-[36px]! lg:text-[48px]! leading-11.5 lg:leading-15.5!">
+                    <Heading2 className="text-[30px]! md:text-[34px]! lg:text-[46px]! leading-11.5 lg:leading-15.5!">
                         Our Mission
                     </Heading2>
                     <Paragraph className="leading-5! lg:leading-6.75! text-navlink-text!">
@@ -29,7 +29,7 @@ const AboutUsSection = () => {
                     </Paragraph>
                 </div>
                 <div className="col-span-1 md:col-span-4 lg:col-span-4 flex flex-col gap-3.75 lg:gap-5 bg-background rounded-[10px] py-7 md:py-8 lg:py-10.5 px-5.5 md:px-5 lg:px-9.25">
-                    <Heading2 className="text-[32px]! md:text-[36px]! lg:text-[48px]! leading-11.5 lg:leading-15.5!">
+                    <Heading2 className="text-[30px]! md:text-[34px]! lg:text-[46px]! leading-11.5 lg:leading-15.5!">
                         Our Vision
                     </Heading2>
                     <Paragraph className="leading-5! lg:leading-6.75! text-navlink-text!">

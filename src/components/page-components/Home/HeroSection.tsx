@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className="z-10 absolute bottom-9 -translate-y-1/2 w-full px-4 md:px-0">
         <div className="flex flex-col gap-9.5">
           <div className="flex flex-col gap-3 justify-center items-center">
-            <Heading2 className="text-white! md:text-[48px]! leading-[130%]! uppercase">
+            <Heading2 className="text-white! md:text-[46px]! leading-[130%]! uppercase">
               Half Byte هاف بايت
             </Heading2>
             <Paragraph className="text-white! md:text-xl! leading-[136%]! text-center">
