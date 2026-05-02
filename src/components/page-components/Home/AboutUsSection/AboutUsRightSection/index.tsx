@@ -5,11 +5,13 @@ import { useState } from "react";
 import { Heading3, Paragraph } from "@/components/common/Typography";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
+import { useT } from "@/i18n/DictionaryProvider";
 
 const ABOUT_IMAGE_SRC = "/assets/pages/Home/AboutUsSection/rightsideimage.jpg";
 
 const AboutUsRightSection = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const dict = useT();
 
   return (
     <div>
@@ -28,7 +30,7 @@ const AboutUsRightSection = () => {
         )}
         <Image
           src={ABOUT_IMAGE_SRC}
-          alt="Half Byte — industry and technology"
+          alt={dict.aboutUs.imageAlt}
           fill
           className={cn(
             "object-cover object-center transition-opacity duration-300",
@@ -41,10 +43,12 @@ const AboutUsRightSection = () => {
         <div className="about-us-badge-wrapper relative z-10">
           <div className="w-[125px] ssmd:w-[165px] md:w-[228px] lg:w-[197px] min-h-[85px] ssmd:min-h-[129px] md:min-h-[146px] lg:h-[170px] rounded-[10px] bg-primary px-3.75 ssmd:px-4.75 py-3 ssmd:py-5.5 md:px-8.75 md:py-6.5 lg:p-6.5">
             <Heading3 className="text-[#FAFFFC]! leading-10.75! lg:leading-13.5! lg:text-[44px]!">
-              30+
+              {dict.aboutUs.experienceBadge.number}
             </Heading3>
             <Paragraph className="text-[#F5F4F4]! text-sm! md:text-base! leading-5! lg:leading-5.25!">
-              Years Combined <br /> Industry Experience
+              {dict.aboutUs.experienceBadge.title}
+              <br />
+              {dict.aboutUs.experienceBadge.subtitle}
             </Paragraph>
           </div>
         </div>

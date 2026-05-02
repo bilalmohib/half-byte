@@ -1,0 +1,197 @@
+{
+  "navbar": {
+    "aboutUs": "About Us",
+    "technologies": "Technologies",
+    "newsCareers": "News & Careers",
+    "contactUs": "Contact Us",
+    "openMenu": "Open main menu",
+    "toggleTechnologies": "Toggle technologies submenu",
+    "mobileNavLabel": "Mobile navigation"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "en": "EN",
+    "ar": "ع",
+    "english": "English",
+    "arabic": "العربية"
+  },
+  "hero": {
+    "title": "Half Byte هاف بايت",
+    "subtitle": "Amplifying Digital Power",
+    "contactCta": "Contact Us",
+    "exploreCta": "Explore Technologies"
+  },
+  "aboutUs": {
+    "badge": "About us",
+    "heading": "Why Choose Half Byte?",
+    "description": "Half Byte is a Saudi company that bridges the gap between business needs and complex technology—delivering practical, secure, and scalable solutions for organizations at any stage of digital maturity.",
+    "reasons": {
+      "security": "Security-Driven Architecture",
+      "industry": "Multi-Industry Expertise",
+      "scalable": "Scalable Enterprise Solutions"
+    },
+    "experienceBadge": {
+      "number": "30+",
+      "title": "Years Combined",
+      "subtitle": "Industry Experience"
+    },
+    "imageAlt": "Half Byte — industry and technology",
+    "mission": {
+      "heading": "Our Mission",
+      "description": "To deliver reliable, scalable, and state-of-the-art technologies by building intuitive infrastructures designed for cutting-edge solutions that enhance automation, productivity, and intelligent decision-making—all powered by AI and secured through cohesive cybersecurity layers tailored to each client’s needs and maturity level."
+    },
+    "vision": {
+      "heading": "Our Vision",
+      "description": "To seamlessly integrate technology into daily business activities and partner with clients to adopt reliable, scalable, and modern digital solutions that enhance productivity."
+    }
+  },
+  "values": {
+    "heading": "Our Values",
+    "items": {
+      "integrity": {
+        "title": "Integrity",
+        "description": "All our actions and outcomes are guided by ethics and transparency."
+      },
+      "clientCentricity": {
+        "title": "Client Centricity",
+        "description": "Empowering our clients to achieve their business goals."
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "description": "We are committed to minimizing our environmental impact and ensuring that our business practices support long-term economic, social, and ecological balance."
+      }
+    }
+  },
+  "strategicGoals": {
+    "heading": "Our Strategic Goals",
+    "items": {
+      "firmEnablement": {
+        "question": "Firm Enablement",
+        "answer": "Providing end-to-end solutions across varying maturity levels through clear communication and guided onboarding."
+      },
+      "itConsultancy": {
+        "question": "IT Consultancy–Led Model",
+        "answer": "Driving organizational and business transformation through assessments, roadmap development, and advisory services that align technology with business values."
+      },
+      "endToEnd": {
+        "question": "Comprehensive End-to-End Delivery",
+        "answer": "Offering integrated services covering consultancy, systems integration, cloud, AI solutions, software development, and cybersecurity."
+      },
+      "partnership": {
+        "question": "Partnership Ecosystem Growth",
+        "answer": "Building strong alliances with leading global technology providers to deliver reliable, supported, and future-ready solutions."
+      },
+      "scalability": {
+        "question": "Secure Scalability by Design",
+        "answer": "Designing modular, secure, and scalable architectures that support long-term growth, resilience, and evolving business needs."
+      },
+      "operational": {
+        "question": "Operational Excellence and Trust",
+        "answer": "Delivering measurable outcomes through quality, compliance, documentation, and continuous improvement—earning long-term client confidence."
+      }
+    }
+  },
+  "technologies": {
+    "badge": "Technologies",
+    "heading": "Technologies",
+    "items": {
+      "aiEnablement": {
+        "title": "AI Enablement",
+        "description": "Half Byte leverages AI solutions across different industries, enabling clients to adopt the right technologies aligned with their business values and objectives. We deliver AI solutions using various deployment methodologies and consumption models tailored to each client’s needs."
+      },
+      "systemsIntegration": {
+        "title": "Systems Integration",
+        "description": "We design and build reliable, scalable, and secure IT infrastructures to address diverse client needs—whether through greenfield deployments or integrating new solutions into existing environments. Our approach ensures dependable delivery with appropriate scalability options, following best practices from the design phase through deployment and ongoing operations to guarantee a robust infrastructure that serves business objectives effectively."
+      },
+      "cloudOrchestration": {
+        "title": "Cloud Orchestration",
+        "description": "By combining our private cloud capabilities with partnerships with hyperscalers, we deliver highly customized cloud solutions tailored to client workloads and specific needs. We also provide advisory services to help clients choose the most suitable deployment model—private, hybrid, or multi-cloud—ensuring optimal capacity and computing power, along with seamless migration and related services."
+      },
+      "managedServices": {
+        "title": "Managed Services",
+        "description": "We empower clients by offering managed services through a holistic approach or modular service components. This ensures the right balance between efficiency and effectiveness while we handle backend operations—removing technological burdens and enabling businesses to focus on achieving their goals."
+      },
+      "cybersecurity": {
+        "title": "Cybersecurity Services",
+        "description": "Half Byte adopts a comprehensive approach to cybersecurity, focusing on the CIA triad (Confidentiality, Integrity, Availability) while emphasizing GRC. We secure environments starting from the hardware level up to policies and information security frameworks, providing continuous monitoring and threat analysis to mitigate risks and prevent zero-day attacks."
+      },
+      "consultancy": {
+        "title": "Technology Consultancy",
+        "description": "With a highly experienced team spanning multiple sectors and over 30 years of combined expertise—supported by strong academic backgrounds and international recognitions—Half Byte delivers timely and effective advisory services. We help clients adopt the right IT strategies and methodologies aligned with their business objectives."
+      },
+      "grcIntelligence": {
+        "title": "GRC Intelligence",
+        "intro": "Half Byte delivers advanced GRC solutions built on AI-driven intelligence systems, designed to support all stages of the risk management lifecycle in alignment with local and international regulations.",
+        "approachLabel": "Our approach includes:",
+        "approach": [
+          "Thorough identification using KYC/KYP practices",
+          "Deep due diligence from financial and security perspectives",
+          "Visualization of entity and relationship networks",
+          "Correlation of data from multiple sources to uncover hidden insights",
+          "Comprehensive 360° background checks, including legal cases and social media analysis"
+        ],
+        "outro": "This enables clients to gain clear visibility, mitigate risks, evaluate the impact of decisions, and implement effective risk management strategies across the entire lifecycle."
+      }
+    }
+  },
+  "newsAndCareers": {
+    "heading": "News & Careers",
+    "latestNews": "Latest News",
+    "joinTeam": {
+      "heading": "Join Half Byte Team",
+      "subheading": "Register your interest to become part of the Half Byte team.",
+      "imageAlt": "Join Half Byte team",
+      "fields": {
+        "name": "Name",
+        "namePlaceholder": "Enter your name",
+        "phone": "Phone Number",
+        "phonePlaceholder": "Enter your phone number",
+        "email": "Email",
+        "emailPlaceholder": "Enter your email address"
+      },
+      "submit": "Submit",
+      "validation": {
+        "nameAndEmailRequired": "Please enter your name and email address.",
+        "invalidEmail": "Please enter a valid email address."
+      },
+      "success": "Thank you! We’ve received your interest in joining the Half Byte team."
+    }
+  },
+  "contactUs": {
+    "heading": "Contact Us",
+    "address": {
+      "label": "Address",
+      "value": "Riyadh, King Abdulaziz Road, RRRB6143"
+    },
+    "email": {
+      "label": "Email Address"
+    },
+    "phone": {
+      "label": "Phone Number"
+    },
+    "followUs": "Follow us on social media:"
+  },
+  "callToAction": {
+    "heading": "Ready to Elevate Your Business with Smart Technology?",
+    "consultation": "Get A Consultation",
+    "contactUs": "Contact Us"
+  },
+  "footer": {
+    "contactUs": "Contact Us",
+    "quickLinks": "Quick Links",
+    "newsletter": {
+      "heading": "Subscribe to our newsletter",
+      "emailPlaceholder": "Enter your email address...",
+      "subscribe": "Subscribe",
+      "validation": {
+        "required": "Please enter your email address.",
+        "invalidEmail": "Please enter a valid email address."
+      },
+      "success": "You’re subscribed! Thanks for joining our newsletter."
+    },
+    "followUs": "Follow us"
+  },
+  "ourPartners": {
+    "heading": "Our Partners"
+  }
+}

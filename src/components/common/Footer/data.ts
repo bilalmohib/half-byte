@@ -1,15 +1,44 @@
-export const quickLinks = [
-  { title: "About Us", href: "/#about-us" },
-  { title: "Technologies", href: "/#technologies" },
-  { title: "News & Careers", href: "/#news-careers" },
-  { title: "Contact Us", href: "/#contact-us" },
-] as const;
+import type { Dictionary } from "@/app/[lang]/dictionaries";
+import type { Locale } from "@/i18n/config";
+import { withLocale } from "@/i18n/path";
+
+export interface FooterQuickLink {
+  key: "aboutUs" | "technologies" | "newsCareers" | "contactUs";
+  title: string;
+  href: string;
+}
+
+export function getQuickLinks(
+  dict: Dictionary,
+  locale: Locale,
+): FooterQuickLink[] {
+  const home = withLocale("/", locale);
+  return [
+    { key: "aboutUs", title: dict.navbar.aboutUs, href: `${home}#about-us` },
+    {
+      key: "technologies",
+      title: dict.navbar.technologies,
+      href: `${home}#technologies`,
+    },
+    {
+      key: "newsCareers",
+      title: dict.navbar.newsCareers,
+      href: `${home}#news-careers`,
+    },
+    {
+      key: "contactUs",
+      title: dict.navbar.contactUs,
+      href: `${home}#contact-us`,
+    },
+  ];
+}
 
 export const footerContact = {
-  address: "Riyadh, King Abdulaziz Road, RRRB6143",
   emails: ["khalid@halfbyte.com.sa", "info@halfbyte.com.sa"] as const,
   phone: "+966 554607074",
   phoneHref: "tel:+966554607074",
+  addressMapHref:
+    "https://www.google.com/maps/search/?api=1&query=King+Abdulaziz+Road+RRRB6143+Riyadh",
 };
 
 /** Order matches footer design (left → right). */
