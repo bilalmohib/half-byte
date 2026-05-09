@@ -14,18 +14,22 @@ import {
   technologiesHomeHref,
   scrollToHomeSectionById,
   tryScrollToHashFromHref,
+  homeHref,
 } from "@/lib/hash-nav";
 import {
-  menuItems,
-  technologyItems,
+  getMenuItems,
+  getTechnologyItems,
 } from "@/components/common/Navbar/NavItems/data";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useT, useLocale } from "@/i18n/DictionaryProvider";
 
 const HOVER_CLOSE_DELAY_MS = 150;
 
 function TechnologiesNavDropdown({ label }: { label: string }) {
   const router = useRouter();
   const pathname = usePathname();
+  const dict = useT();
+  const techItems = getTechnologyItems(dict, pathname);
   const [open, setOpen] = useState(false);
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -38,7 +42,10 @@ function TechnologiesNavDropdown({ label }: { label: string }) {
 
   const scheduleClose = useCallback(() => {
     cancelClose();
-    closeTimerRef.current = setTimeout(() => setOpen(false), HOVER_CLOSE_DELAY_MS);
+    closeTimerRef.current = setTimeout(
+      () => setOpen(false),
+      HOVER_CLOSE_DELAY_MS,
+    );
   }, [cancelClose]);
 
   useEffect(() => () => cancelClose(), [cancelClose]);
@@ -53,10 +60,10 @@ function TechnologiesNavDropdown({ label }: { label: string }) {
         onPointerLeave={scheduleClose}
         onClick={(e) => {
           e.preventDefault();
-          if (pathname === "/") {
+          if (homeHref(pathname) === pathname || pathname?.replace(/\/$/, "") === homeHref(pathname).replace(/\/$/, "")) {
             scrollToHomeSectionById("technologies");
           } else {
-            router.push("/#technologies");
+            router.push(`${homeHref(pathname)}#technologies`);
           }
           setOpen(false);
         }}
@@ -85,9 +92,9 @@ function TechnologiesNavDropdown({ label }: { label: string }) {
         )}
         style={{ boxShadow: "0px 4px 5.1px 0px #00000040" }}
       >
-        {technologyItems.map((techItem) => (
+        {techItems.map((techItem) => (
           <DropdownMenuItem
-            key={techItem.title}
+            key={techItem.slug}
             className={cn(
               "cursor-pointer rounded-none border-0 bg-transparent px-0 py-0",
               "font-roboto text-sm md:text-base font-medium leading-none tracking-normal text-navlink-dropdown-text",
@@ -95,7 +102,7 @@ function TechnologiesNavDropdown({ label }: { label: string }) {
               "data-highlighted:bg-transparent! data-highlighted:text-primary!",
             )}
             onSelect={() => {
-              router.push(technologiesHomeHref(techItem.slug), {
+              router.push(technologiesHomeHref(techItem.slug, pathname), {
                 scroll: false,
               });
               setOpen(false);
@@ -111,14 +118,17 @@ function TechnologiesNavDropdown({ label }: { label: string }) {
 
 const NavItems = () => {
   const pathname = usePathname();
+  const dict = useT();
+  const locale = useLocale();
+  const items = getMenuItems(dict, locale);
   return (
     <div className="flex items-center w-full gap-4.25 mllg:gap-20 lg:gap-[95px]">
-      {menuItems.map((item) =>
+      {items.map((item) =>
         item.hasDropdown ? (
-          <TechnologiesNavDropdown key={item.title} label={item.title} />
+          <TechnologiesNavDropdown key={item.key} label={item.title} />
         ) : (
           <Link
-            key={item.title}
+            key={item.key}
             href={item.href}
             scroll={item.href.includes("#") ? false : undefined}
             onClick={(e) => tryScrollToHashFromHref(e, item.href, pathname)}

@@ -1,63 +1,57 @@
-import { cn } from "@/lib/utils";
-import { Label } from "@/components/ui/label";
+import toast from "react-hot-toast";
+import { FormEvent, useState } from "react";
 import { Input } from "@/components/ui/input";
-import { Heading4, Paragraph } from "@/components/common/Typography";
+import { Button } from "@/components/ui/button";
+import { useT } from "@/i18n/DictionaryProvider";
+import { Heading5 } from "@/components/common/Typography";
 
-interface SubscribeToNewsLetterProps {
-  className?: string;
-}
+const SubscribeToNewsLetter = () => {
+  const [email, setEmail] = useState("");
+  const dict = useT();
+  const t = dict.footer.newsletter;
 
-const SubscribeToNewsLetter = ({ className }: SubscribeToNewsLetterProps) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const trimmed = email.trim();
+    if (!trimmed) {
+      toast.error(t.validation.required);
+      return;
+    }
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed);
+    if (!emailOk) {
+      toast.error(t.validation.invalidEmail);
+      return;
+    }
+
+    toast.success(t.success);
+    setEmail("");
+  };
+
   return (
-    <div
-      className={cn(
-        "w-full rounded-[20px] bg-transparent border border-solid border-[#585A7D] p-8 flex flex-col gap-2.5",
-        className,
-      )}
-    >
-      <Heading4 className="text-white! leading-[142%]!">
-        Stay Ahead of the Intelligence Curve
-      </Heading4>
-      <Paragraph className="text-white!">
-        Receive insights from the frontier of planetary intelligence,
-        causality-first AI, and the architecture of consciousness.
-      </Paragraph>
-
-      <div className="flex flex-row gap-4.5 mt-3.5">
-        <div className="flex flex-col gap-2">
-          <Label htmlFor="first-name" className="text-white!">
-            First Name
-          </Label>
-          <Input
-            id="first-name"
-            type="text"
-            placeholder="John"
-            variant="underline"
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <Label htmlFor="last-name" className="text-white!">
-            Last Name
-          </Label>
-          <Input
-            id="last-name"
-            type="text"
-            placeholder="Doe"
-            variant="underline"
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <Label htmlFor="email" className="text-white!">
-            Email
-          </Label>
-          <Input
-            id="email"
-            type="email"
-            placeholder="johndoe@gmail.com"
-            variant="underline"
-          />
-        </div>
-      </div>
+    <div className="flex flex-col gap-4">
+      <Heading5>{t.heading}</Heading5>
+      <form
+        onSubmit={handleSubmit}
+        className="flex max-w-96! lg:w-full! min-w-0 items-center gap-0 rounded-full border border-[#DBDBDB] bg-white p-1 pl-4 pr-2 shadow-none"
+      >
+        <Input
+          variant="underline"
+          inputClassName="min-w-0 flex-1 border-0 bg-transparent py-2 text-sm text-black outline-none placeholder:text-[#A3A3A3]"
+          id="footer-newsletter-email"
+          type="email"
+          autoComplete="email"
+          placeholder={t.emailPlaceholder}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="min-h-[44px] min-w-0 flex-1 border-0 bg-transparent py-2 text-sm text-black outline-none placeholder:text-[#A3A3A3]"
+        />
+        <Button
+          type="submit"
+          className="h-10.5! shrink-0 rounded-full bg-primary px-5 text-base! font-normal! text-white transition-colors hover:bg-buttonHover sm:h-10 sm:px-6"
+        >
+          {t.subscribe}
+        </Button>
+      </form>
     </div>
   );
 };

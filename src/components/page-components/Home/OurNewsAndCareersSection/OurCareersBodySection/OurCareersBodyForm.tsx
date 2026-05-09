@@ -4,8 +4,12 @@ import { FormEvent } from "react";
 import toast from "react-hot-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useT } from "@/i18n/DictionaryProvider";
 
 const OurCareersBodyForm = () => {
+  const dict = useT();
+  const t = dict.newsAndCareers.joinTeam;
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -13,21 +17,17 @@ const OurCareersBodyForm = () => {
     const name = String(fd.get("name") ?? "").trim();
     const email = String(fd.get("email") ?? "").trim();
     if (!name || !email) {
-      toast.error("Please enter your name and email address.");
+      toast.error(t.validation.nameAndEmailRequired);
       return;
     }
 
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     if (!emailOk) {
-      toast.error("Please enter a valid email address.");
+      toast.error(t.validation.invalidEmail);
       return;
     }
 
-    // TODO: wire to API / email service when ready
-
-    toast.success(
-      "Thank you! We’ve received your interest in joining the Half Byte team.",
-    );
+    toast.success(t.success);
     form.reset();
   };
 
@@ -43,7 +43,7 @@ const OurCareersBodyForm = () => {
           id="careers-name"
           autoComplete="name"
           required
-          placeholder="Enter your name"
+          placeholder={t.fields.namePlaceholder}
           type="text"
           inputClassName="h-13.75! lg:h-15! text-base! lg:text-lg! px-4.5! lg:px-7.25! w-full"
           className="w-full"
@@ -52,7 +52,7 @@ const OurCareersBodyForm = () => {
           name="phone"
           id="careers-phone"
           autoComplete="tel"
-          placeholder="Enter your phone number"
+          placeholder={t.fields.phonePlaceholder}
           type="tel"
           inputClassName="h-13.75! lg:h-15! text-base! lg:text-lg! px-4.5! lg:px-7.25! w-full"
           className="w-full"
@@ -62,7 +62,7 @@ const OurCareersBodyForm = () => {
           id="careers-email"
           autoComplete="email"
           required
-          placeholder="Enter your email address"
+          placeholder={t.fields.emailPlaceholder}
           type="email"
           inputClassName="h-13.75! lg:h-15! text-base! lg:text-lg! px-4.5! lg:px-7.25! w-full"
           className="w-full"
@@ -74,7 +74,7 @@ const OurCareersBodyForm = () => {
           variant="default"
           className="rounded-[88px] bg-primary text-white h-11 lg:h-13 text-base! sm:text-lg! lg:text-xl! font-normal! py-0.5! px-16.25"
         >
-          Submit
+          {t.submit}
         </Button>
       </div>
     </form>

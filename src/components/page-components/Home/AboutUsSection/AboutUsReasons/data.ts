@@ -1,39 +1,38 @@
+export type AboutUsReasonKey = "security" | "industry" | "scalable";
+
 export interface IAboutUsReasonsData {
-    info: string;
-    image: {
-        src: string;
-        alt: string;
-        width: number;
-        height: number;
-    }
+  /** Translation key into `dict.aboutUs.reasons[...]`. */
+  dictKey: AboutUsReasonKey;
+  image: {
+    src: string;
+    width: number;
+    height: number;
+  };
 }
 
 export const aboutUsReasonsData: IAboutUsReasonsData[] = [
-    {
-        info: "Security-Driven <br class='hidden ssmd:block' /> Architecture",
-        image: {
-            src: "/assets/pages/Home/AboutUsSection/AboutUsReasons/carbon_security.png",
-            alt: "Security-Driven Architecture",
-            width: 46,
-            height: 46
-        },
+  {
+    dictKey: "security",
+    image: {
+      src: "/assets/pages/Home/AboutUsSection/AboutUsReasons/carbon_security.png",
+      width: 46,
+      height: 46,
     },
-    {
-        info: "Multi-Industry <br class='hidden ssmd:block' /> Expertise",
-        image: {
-            src: "/assets/pages/Home/AboutUsSection/AboutUsReasons/carbon_enterprise.svg",
-            alt: "Multi-Industry Expertise",
-            width: 44,
-            height: 44
-        }
+  },
+  {
+    dictKey: "industry",
+    image: {
+      src: "/assets/pages/Home/AboutUsSection/AboutUsReasons/carbon_enterprise.svg",
+      width: 44,
+      height: 44,
     },
-    {
-        info: "Scalable Enterprise <br class='hidden ssmd:block' /> Solutions",
-        image: {
-            src: "/assets/pages/Home/AboutUsSection/AboutUsReasons/material-symbols_enterprise-outline.svg",
-            alt: "Scalable Enterprise Solutions",
-            width: 44,
-            height: 44
-        }
-    }
+  },
+  {
+    dictKey: "scalable",
+    image: {
+      src: "/assets/pages/Home/AboutUsSection/AboutUsReasons/material-symbols_enterprise-outline.svg",
+      width: 44,
+      height: 44,
+    },
+  },
 ];

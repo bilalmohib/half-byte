@@ -9,12 +9,25 @@ import Footer from "@/components/common/Footer";
 import { NavbarProvider } from "@/contexts/NavbarContext";
 import ScrollRestoration from "@/components/common/ScrollRestoration";
 import HashScrollIntoView from "@/components/common/HashScrollIntoView";
+import { isLocale } from "@/i18n/config";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
 
+function stripLocale(pathname: string | null): string {
+  if (!pathname) return "/";
+  const segments = pathname.split("/").filter(Boolean);
+  if (segments.length === 0) return "/";
+  if (isLocale(segments[0])) {
+    const rest = segments.slice(1).join("/");
+    return rest ? `/${rest}` : "/";
+  }
+  return pathname;
+}
+
 const MainAppLayoutContent = ({ children }: { children: React.ReactNode }) => {
-  const pathname = usePathname();
+  const rawPathname = usePathname();
+  const pathname = stripLocale(rawPathname);
 
   const isTopPaddingAppliedToNav =
     pathname === "/" ||
