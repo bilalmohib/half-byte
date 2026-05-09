@@ -1,6 +1,5 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { Heading2, Paragraph } from "@/components/common/Typography";
 import { useT } from "@/i18n/DictionaryProvider";
 
@@ -8,14 +7,6 @@ const AboutUsHeaderSection = () => {
   const dict = useT();
   return (
     <div className="flex flex-col gap-2 md:gap-3.75 lg:gap-5.25">
-      <Badge
-        variant="outline"
-        className="bg-white! border border-input-border-default! rounded-[21px]! px-6! lg:px-7! py-3.75! lg:py-4!"
-      >
-        <Paragraph className="text-[#2D2D2D]! leading-none! text-center!">
-          {dict.aboutUs.badge}
-        </Paragraph>
-      </Badge>
       <Heading2 className="text-[30px]! md:text-4xl! lg:text-[46px]! leading-10.25! md:leading-11.5! lg:leading-15.5!">
         {dict.aboutUs.heading}
       </Heading2>

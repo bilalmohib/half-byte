@@ -1,17 +1,17 @@
 "use client";
 
-import Link from "next/link";
 import { LuPhone } from "react-icons/lu";
 import { GrLocation } from "react-icons/gr";
 import { AiOutlineMail } from "react-icons/ai";
-import { Heading5, Paragraph } from "@/components/common/Typography";
+import { Heading5 } from "@/components/common/Typography";
+import { MailtoLink, TelLink } from "@/components/common/contact-links";
 import { useT } from "@/i18n/DictionaryProvider";
 
 const PHONE_VALUE = "+966 554607074";
 const PHONE_HREF = "tel:+966554607074";
 const EMAILS = ["khalid@halfbyte.com.sa", "info@halfbyte.com.sa"] as const;
 const ADDRESS_MAP_HREF =
-  "https://www.google.com/maps/search/?api=1&query=King+Abdulaziz+Road+RRRB6143+Riyadh";
+  "https://maps.app.goo.gl/JRc6tTynKhkjPn4k9";
 
 const ContactUsItemsSection = () => {
   const dict = useT();
@@ -29,16 +29,14 @@ const ContactUsItemsSection = () => {
             <Heading5 className="leading-5 md:leading-6.25 lg:leading-7.75!">
               {dict.contactUs.address.label}
             </Heading5>
-            <Link
+            <a
               href={ADDRESS_MAP_HREF}
               target="_blank"
               rel="noopener noreferrer"
-              className="no-underline"
+              className="font-roboto font-normal lg:text-xl! leading-5 md:leading-5.25 lg:leading-6.75! text-heading no-underline hover:text-primary cursor-pointer wrap-break-word"
             >
-              <Paragraph className="lg:text-xl! leading-5 md:leading-5.25 lg:leading-6.75! hover:text-primary">
-                {dict.contactUs.address.value}
-              </Paragraph>
-            </Link>
+              {dict.contactUs.address.value}
+            </a>
           </div>
         </div>
       </div>
@@ -54,17 +52,13 @@ const ContactUsItemsSection = () => {
             <Heading5 className="leading-5 md:leading-6.25 lg:leading-7.75!">
               {dict.contactUs.email.label}
             </Heading5>
-            <div className="flex flex-col gap-2.25 md:gap-1.75 lg:gap-3.25">
+            <div className="flex min-w-0 flex-col gap-2.25 md:gap-1.75 lg:gap-3.25">
               {EMAILS.map((email) => (
-                <Link
+                <MailtoLink
                   key={email}
-                  href={`mailto:${email}`}
-                  className="no-underline"
-                >
-                  <Paragraph className="lg:text-xl! leading-5 md:leading-5.25 lg:leading-6.75! hover:text-primary">
-                    {email}
-                  </Paragraph>
-                </Link>
+                  email={email}
+                  className="font-roboto font-normal lg:text-xl! leading-5 md:leading-5.25 lg:leading-6.75! text-heading no-underline hover:text-primary cursor-pointer break-all"
+                />
               ))}
             </div>
           </div>
@@ -82,11 +76,12 @@ const ContactUsItemsSection = () => {
             <Heading5 className="leading-5 md:leading-6.25 lg:leading-7.75!">
               {dict.contactUs.phone.label}
             </Heading5>
-            <Link href={PHONE_HREF} className="no-underline">
-              <Paragraph className="lg:text-xl! leading-5 md:leading-5.25 lg:leading-6.75! hover:text-primary">
-                {PHONE_VALUE}
-              </Paragraph>
-            </Link>
+            <TelLink
+              href={PHONE_HREF}
+              className="font-roboto font-normal lg:text-xl! leading-5 md:leading-5.25 lg:leading-6.75! text-heading no-underline hover:text-primary cursor-pointer"
+            >
+              {PHONE_VALUE}
+            </TelLink>
           </div>
         </div>
       </div>

@@ -37,8 +37,7 @@ export const footerContact = {
   emails: ["khalid@halfbyte.com.sa", "info@halfbyte.com.sa"] as const,
   phone: "+966 554607074",
   phoneHref: "tel:+966554607074",
-  addressMapHref:
-    "https://www.google.com/maps/search/?api=1&query=King+Abdulaziz+Road+RRRB6143+Riyadh",
+  addressMapHref: "https://maps.app.goo.gl/JRc6tTynKhkjPn4k9",
 };
 
 /** Order matches footer design (left → right). */

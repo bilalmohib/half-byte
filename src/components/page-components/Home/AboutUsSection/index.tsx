@@ -11,7 +11,7 @@ const AboutUsSection = () => {
   const dict = useT();
   return (
     <section id="about-us" className="scroll-mt-32 bg-white">
-      <Container className="grid grid-cols-1 gap-7.5 md:gap-10.75 lg:gap-0 lg:grid-cols-2 py-22.5 md:py-27.5 lg:py-35">
+      <Container className="grid grid-cols-1 gap-7.5 md:gap-10.75 lg:gap-0 lg:grid-cols-2 py-13 md:py-16 lg:py-18">
         <div>
           <div className="flex flex-col gap-7 md:gap-8.75 lg:gap-11.5">
             <AboutUsHeaderSection />

@@ -16,6 +16,7 @@ import { Heading5, Paragraph } from "@/components/common/Typography";
 import { followUsData } from "@/components/page-components/Home/ContactUsSection/ContactUsFollowUsSection/data";
 import { useT, useLocale } from "@/i18n/DictionaryProvider";
 import SubscribeToNewsLetter from "@/components/common/Footer/SubscribeToNewsLetter";
+import { MailtoLink, TelLink } from "@/components/common/contact-links";
 
 function ContactIconCircle({ children }: { children: React.ReactNode }) {
   return (
@@ -76,37 +77,30 @@ const Footer = ({ className }: FooterProps) => {
                 <ContactIconCircle>
                   <MapPin className="size-4" strokeWidth={2.25} />
                 </ContactIconCircle>
-                <Link
+                <a
                   href={footerContact.addressMapHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="no-underline"
+                  className="font-roboto font-normal text-[13px] md:text-[14px] lg:text-[16px] leading-normal md:leading-[142%] text-[#1A1A1A] no-underline hover:text-primary cursor-pointer wrap-break-word"
                 >
-                  <Paragraph className="text-[#1A1A1A]! hover:text-primary">
-                    {dict.contactUs.address.value}
-                  </Paragraph>
-                </Link>
+                  {dict.contactUs.address.value}
+                </a>
               </li>
               <li className="flex gap-3.5">
                 <ContactIconCircle>
                   <Mail className="size-4" strokeWidth={2.25} />
                 </ContactIconCircle>
                 <div className="flex min-w-0 flex-col gap-1">
-                  <Link href={`mailto:${firstEmail}`} className="no-underline">
-                    <Paragraph className="text-[#1A1A1A]! hover:text-primary">
-                      {firstEmail}
-                    </Paragraph>
-                  </Link>
+                  <MailtoLink
+                    email={firstEmail}
+                    className="font-roboto font-normal text-[13px] md:text-[14px] lg:text-[16px] leading-normal md:leading-[142%] text-[#1A1A1A] no-underline hover:text-primary cursor-pointer break-all"
+                  />
                   {restEmails.map((email) => (
-                    <Link
+                    <MailtoLink
                       key={email}
-                      href={`mailto:${email}`}
-                      className="no-underline"
-                    >
-                      <Paragraph className="text-[#1A1A1A]! hover:text-primary">
-                        {email}
-                      </Paragraph>
-                    </Link>
+                      email={email}
+                      className="font-roboto font-normal text-[13px] md:text-[14px] lg:text-[16px] leading-normal md:leading-[142%] text-[#1A1A1A] no-underline hover:text-primary cursor-pointer break-all"
+                    />
                   ))}
                 </div>
               </li>
@@ -114,11 +108,12 @@ const Footer = ({ className }: FooterProps) => {
                 <ContactIconCircle>
                   <Phone className="size-4" strokeWidth={2.25} />
                 </ContactIconCircle>
-                <Link href={footerContact.phoneHref} className="no-underline">
-                  <Paragraph className="text-[#1A1A1A]!">
-                    {footerContact.phone}
-                  </Paragraph>
-                </Link>
+                <TelLink
+                  href={footerContact.phoneHref}
+                  className="font-roboto font-normal text-[13px] md:text-[14px] lg:text-[16px] leading-normal md:leading-[142%] text-[#1A1A1A] no-underline hover:text-primary cursor-pointer"
+                >
+                  {footerContact.phone}
+                </TelLink>
               </li>
             </ul>
           </div>
