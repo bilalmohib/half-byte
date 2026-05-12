@@ -460,6 +460,25 @@ body {
   background: radial-gradient(circle at 0% 0%, white 2px, transparent 16px);
 }
 
+[dir="rtl"] .about-us-badge-wrapper {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 16px;
+  padding-right: 0;
+  padding-left: 16px;
+}
+
+[dir="rtl"] .about-us-badge-wrapper::before {
+  right: auto;
+  left: -16px;
+  background: radial-gradient(circle at 100% 0%, white 2px, transparent 16px);
+}
+
+[dir="rtl"] .about-us-badge-wrapper::after {
+  left: auto;
+  right: 0;
+  background: radial-gradient(circle at 100% 0%, white 2px, transparent 16px);
+}
+
 /* Imported from previous project */
 @media (min-width: 1400px) and (max-width: 1439px) {
   .card {
